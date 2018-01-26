@@ -44,10 +44,11 @@ Page({
         if (cache) {
           return this.setData({ movies: cache.movies, loading: false })
         }
-
+        console.log(48, this.data.movies);
         app.douban.find('coming_soon', 1, 3)
           .then(d => {
             this.setData({ movies: d.subjects, loading: false })
+            console.log(50, d);
             return app.wechat.setStorage('last_splash_data', {
               movies: d.subjects,
               expires: Date.now() + 1 * 24 * 60 * 60 * 1000

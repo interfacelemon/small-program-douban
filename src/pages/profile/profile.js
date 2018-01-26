@@ -9,8 +9,8 @@ Page({
   data: {
     title: 'About',
     userInfo: {
-      wechat: 'WEDN-NET',
-      nickName: '汪磊(iceStone)',
+      wechat: 'limeng517900017',
+      nickName: 'limeng',
       avatarUrl: '../../images/qrcode.png'
     }
   },
@@ -18,7 +18,9 @@ Page({
   getUserInfo () {
     const that = this
     app.wechat.getUserInfo()
-      .then(res => that.setData({ userInfo: res.userInfo }))
+      .then(res => {
+        return that.setData({ userInfo: res.userInfo })
+      })
   },
 
   /**
@@ -29,6 +31,7 @@ Page({
       .then(res => {
         if (res.code) {
           console.log('登录成功！' + res.code)
+          this.getUserInfo();
         } else {
           console.error('获取用户登录态失败！' + res.errMsg)
         }
