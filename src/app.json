@@ -5,7 +5,8 @@
     "pages/list/list",
     "pages/item/item",
     "pages/search/search",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/index/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#35495e",

@@ -28,7 +28,7 @@ class BMapWX {
      * @param {Function} complete 完成后执行
      */
     getWXLocation(type, success, fail, complete) {
-        type = type || 'gcj02',
+        type = type || 'gcj02';
         success = success || function () {};
         fail = fail || function () {};
         complete = complete || function () {};
@@ -106,7 +106,7 @@ class BMapWX {
                                 alpha: otherparam["alpha"],
                                 width: otherparam["width"],
                                 height: otherparam["height"]
-                            } 
+                            }
                         }
                         otherparam.success(outputRes);
                     } else {
@@ -236,7 +236,7 @@ class BMapWX {
                         // wxMarkerData为小程序规范的marker格式
                         let outputRes = {};
                         outputRes["originalData"] = res;
-                        outputRes["wxMarkerData"] = [];    
+                        outputRes["wxMarkerData"] = [];
                         outputRes["wxMarkerData"][0] = {
                             id: 0,
                             latitude: result["latitude"],
@@ -321,7 +321,7 @@ class BMapWX {
                         // wxMarkerData为小程序规范的marker格式
                         let outputRes = {};
                         outputRes["originalData"] = res;
-                        outputRes["currentWeather"] = [];    
+                        outputRes["currentWeather"] = [];
                         outputRes["currentWeather"][0] = {
                             currentCity: weatherArr[0]["currentCity"],
                             pm25: weatherArr[0]["pm25"],
